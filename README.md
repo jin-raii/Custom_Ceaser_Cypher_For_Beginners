@@ -42,7 +42,8 @@ t is a type of substitution cipher where each letter in the plaintext is replace
 x is the original letter's position in the alphabet (A=0, B=1, ..., Z=25), and 
 n is the shift value 6.
 
-# Code Brakthrough `main.py`
+# Code Brakthrough 
+1. `main.py`
   **Rich is a Python library for rich text and beautiful formatting in the terminal. [Rich Gihub LInk](https://github.com/Textualize/rich)**
 
 ```
@@ -73,7 +74,42 @@ n is the shift value 6.
   
   # this block of code ensures that main() function runs only when this script is called not when imported as a Module
   if __name__ == "__main__":
-      main()```
+      main()
+```
 
+2. From `ceaser_algo` module
+   ***Explanation of code is in code itself***
+   # Encrypt function
+```
+def encrypt(plaintext, n) -> str:
+    '''
+    1. accepts palintext and int 
+    2. create an empty list and empty string variable
+        a. empty list: to store the index of letters 
+        b. result string: to store list of shifted letters to plain text as a string 
+    3. try/catch block to handle Exception
+    4. loop through plaintext
+        a. find the index of user plaintext 
+        b. find the index of next word for instance.
+            i. if user passes ab as a string and 3 as a n parameter. shifted index and word would be a would have 3 as an index and string becomes d 
+                and b would have 4 as an index and string becomes e
+        c. then append shifted word to an empty_list 
+    5. loop through the appended list
+        a. add string to result variable to get plain text on the console
+
+    '''
+    shift_word, result = [], ''
+    try:
+        for i in plaintext: 
+            find_index =(LETTERS.find(i))
+            next_word = (find_index + n ) % len(LETTERS) # 27 % 26 = 1 therefore the result is a       
+            shift_word.append(LETTERS[next_word])
+    except Exception as err:
+        print('[bold red]error[/bold red]')
+    for i in shift_word:
+        result += i
+    
+    return result
+```
 
 
