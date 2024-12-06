@@ -96,8 +96,9 @@ def encrypt(plaintext, n) -> str:
         c. then append shifted word to an empty_list 
     5. loop through the appended list
         a. add string to result variable to get plain text on the console
-
+    6. returns plaintext string 
     '''
+
     shift_word, result = [], ''
     try:
         for i in plaintext: 
@@ -129,8 +130,9 @@ def decrypt(plaintext, n) -> str:
         c. then append shifted word to an empty_list 
     5. loop through the appended list
         a. add string to result variable to get plain text on the console
-        
+    6. returns plaintext string 
     '''
+
     shift_word, result = [], ''
     try:
         for i in plaintext: 
