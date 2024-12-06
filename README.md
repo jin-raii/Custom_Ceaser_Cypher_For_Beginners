@@ -43,36 +43,37 @@ x is the original letter's position in the alphabet (A=0, B=1, ..., Z=25), and
 n is the shift value 6.
 
 # Code Brakthrough `main.py`
-1. import custom Modules from folder
-    **Rich is a Python library for rich text and beautiful formatting in the terminal. [Rich Gihub LInk](https://github.com/Textualize/rich)**
-`
-from ceaser_algo.main import encrypt, decrypt
-from rich import print
+  **Rich is a Python library for rich text and beautiful formatting in the terminal. [Rich Gihub LInk](https://github.com/Textualize/rich)**
 
-def main():
-    '''
-    1. takes input from user (plaintext)
-    2. takes int number of letters to shift from left to right 
-    3. encrypt(arg1, arg2) takes plaintext and number to go from left to right
-    4. prints the encrypted plain text on the console 
+```
+ from ceaser_algo.main import encrypt, decrypt
+ from rich import print
 
-    decrypt(arg1, arg2) does exactly same as encrypt 
-    '''
-    # encrypt the plaintext
-    user_input = input('enter str: ')
-    input_shift = int(input('enter shift: '))
-    e = encrypt(user_input, input_shift)
-    print(f'[bold green]Your encrypted hash:[/bold green] [bold blue]{e}[/bold blue]')
+  def main():
+      '''
+      1. takes input from user (plaintext)
+      2. takes int number of letters to shift from left to right 
+      3. encrypt(arg1, arg2) takes plaintext and number to go from left to right
+      4. prints the encrypted plain text on the console 
+  
+      decrypt(arg1, arg2) does exactly same as encrypt 
+      '''
+      # encrypt the plaintext
+      user_input = input('enter str: ')
+      input_shift = int(input('enter shift: '))
+      e = encrypt(user_input, input_shift)
+      print(f'[bold green]Your encrypted hash:[/bold green] [bold blue]{e}[/bold blue]')
+  
+      print('[bold magenta]Decrypt[/bold magenta]')
+  
+      # decrypt the encrypted text
+      user_input = input('enter decrypted hash value: ')
+      d = decrypt(user_input, input_shift)
+      print(f'[bold green]Your decrypted hash:[/bold green] [bold blue]{d}[/bold blue]')
+  
+  # this block of code ensures that main() function runs only when this script is called not when imported as a Module
+  if __name__ == "__main__":
+      main()```
 
-    print('[bold magenta]Decrypt[/bold magenta]')
-
-    # decrypt the encrypted text
-    user_input = input('enter decrypted hash value: ')
-    d = decrypt(user_input, input_shift)
-    print(f'[bold green]Your decrypted hash:[/bold green] [bold blue]{d}[/bold blue]')
-
-# this block of code ensures that main() function runs only when this script is called not when imported as a Module
-if __name__ == "__main__":
-    main()`
 
 
