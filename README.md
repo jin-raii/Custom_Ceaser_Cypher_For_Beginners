@@ -111,5 +111,37 @@ def encrypt(plaintext, n) -> str:
     
     return result
 ```
+# Decrypt function explanation
 
+```
+def decrypt(plaintext, n) -> str:
+    '''
+    1. accepts palintext and int 
+    2. create an empty list and empty string variable
+        a. empty list: to store the index of letters 
+        b. result string: to store list of shifted letters to plain text as a string 
+    3. try/catch block to handle Exception
+    4. loop through plaintext
+        a. find the index of user plaintext 
+        b. find the index of next word for instance. d -> 
+            i. if user passes de as an encrypted string and 3 as a n parameter. reversed shifted index would have 1 as an index and string becomes a 
+                and e would have 2 as an index and string becomes b
+        c. then append shifted word to an empty_list 
+    5. loop through the appended list
+        a. add string to result variable to get plain text on the console
+        
+    '''
+    shift_word, result = [], ''
+    try:
+        for i in plaintext: 
+            find_index =(LETTERS.find(i)) 
+            next_word = (find_index - n ) % len(LETTERS)   # 27 % 26 = 1 therefore the result is a
+
+            shift_word.append(LETTERS[next_word])
+    except Exception as err:
+        print('[bold red]error[/bold red]')
+    for i in shift_word:
+        result += i 
+    return result
+```
 
