@@ -79,7 +79,7 @@ n is the shift value 6.
 
 2. From `ceaser_algo` module
    ***Explanation of code is in code itself***
-   # Encrypt function
+# Encrypt function explanation
 ```
 def encrypt(plaintext, n) -> str:
     '''
