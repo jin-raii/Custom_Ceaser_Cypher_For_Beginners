@@ -14,20 +14,25 @@ t is a type of substitution cipher where each letter in the plaintext is replace
   
 # Example of Encryption
 **To encrypt the phrase "HELLO" with a shift of 3:**
-`
-H → K_
-E → H
-L → O
-L → O
-O → R`
+| Plaintext | Ciphertext |
+|-----------|------------|
+| H         | K          |
+| E         | H          |
+| L         | O          |
+| L         | O          |
+| O         | R          |
 **The encrypted message would be "KHOOR" 34.**
 # Decryption Process
 **To decrypt a message, the receiver subtracts the same shift value from each letter:**
-`K → H
-H → E
-O → L
-O → L
-R → O`
+
+| Ciphertext | Plaintext |
+|-----------|------------|
+| K         | H          |
+| H         | E          |
+| O         | L          |
+| O         | L          |
+| R         | O          |
+
 **Thus, "KHOOR" is decrypted back to "HELLO" 23.**
 ​# Mathematical Representation 
  `(x)=(x+n)mod26`
