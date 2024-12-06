@@ -14,8 +14,8 @@ t is a type of substitution cipher where each letter in the plaintext is replace
   
 # Example of Encryption
 **To encrypt the phrase "HELLO" with a shift of 3:**
-`code
-H → K
+`
+H → K_
 E → H
 L → O
 L → O
